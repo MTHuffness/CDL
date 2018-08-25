@@ -1,0 +1,167 @@
+{% extends 'base.html'%}
+
+{% block title %}Draft page{% endblock %}
+
+
+{% block body %}
+    <header class="bg-dark text-white ">
+      <div class="container text-center">
+          <a href="#menu-toggle" class="btn btn-secondary menu_button" id="menu-toggle">Menu</a>
+          <h1>Draft Page</h1>
+      </div>
+    </header>
+
+    <div class="container">
+        <!--draft results area-->
+        <div class="row no-gutters">
+            {% for item in draft_order %}
+                <div class="col-md-3 table-bordered">{{ item.order }} | {{ item.owner }} | {{ item.player }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="row no-gutters">
+            <!--ROOKIES-->
+            <div class="col-md-6">
+                <div class="row space-top">
+                    <div class="col-md-6 table-bordered table-hover">
+                        <table class="">
+                            <th>Rookie RB</th>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Bye Week</th>
+                            {% for item in rookie_rb %}
+                                <tr>
+                                    <td>{{ item }}</td>
+                                    <td>{{ item.rank }}</td>
+                                    <td>{{ item.team }}</td>
+                                    <td>{{ item.bye }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="col-md-6 table-bordered table-hover">
+                        <table>
+                            <th>Rookie WR</th>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Bye Week</th>
+                            {% for item in rookie_wr %}
+                                <tr>
+                                    <td>{{ item }}</td>
+                                    <td>{{ item.rank }}</td>
+                                    <td>{{ item.team }}</td>
+                                    <td>{{ item.bye }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 table-bordered table-hover">
+                        <table>
+                            <th>Rookie QB</th>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Bye Week</th>
+                            {% for item in rookie_qb %}
+                                <tr>
+                                    <td>{{ item }}</td>
+                                    <td>{{ item.rank }}</td>
+                                    <td>{{ item.team }}</td>
+                                    <td>{{ item.bye }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="col-md-6 table-bordered table-hover">
+                        <table>
+                            <th>Rookie TE</th>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Bye Week</th>
+                            {% for item in rookie_te %}
+                                <tr>
+                                    <td>{{ item }}</td>
+                                    <td>{{ item.rank }}</td>
+                                    <td>{{ item.team }}</td>
+                                    <td>{{ item.bye }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--FREE AGENTS-->
+            <div class="col-md-6">
+                <div class="row space-top">
+                    <div class="col-md-6 table-bordered table-hover">
+                        <table>
+                            <th>Free Agent RB</th>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Bye Week</th>
+                            {% for item in fa_rb %}
+                                <tr>
+                                    <td>{{ item }}</td>
+                                    <td>{{ item.rank }}</td>
+                                    <td>{{ item.team }}</td>
+                                    <td>{{ item.bye }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="col-md-6 table-bordered table-hover">
+                        <table>
+                            <th>Free Agent WR</th>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Bye Week</th>
+                            {% for item in fa_wr %}
+                                <tr>
+                                    <td>{{ item }}</td>
+                                    <td>{{ item.rank }}</td>
+                                    <td>{{ item.team }}</td>
+                                    <td>{{ item.bye }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 table-bordered table-hover">
+                        <table>
+                            <th>Free Agent QB</th>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Bye Week</th>
+                            {% for item in fa_qb %}
+                                <tr>
+                                    <td>{{ item }}</td>
+                                    <td>{{ item.rank }}</td>
+                                    <td>{{ item.team }}</td>
+                                    <td>{{ item.bye }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div class="col-md-6 table-bordered table-hover">
+                        <table>
+                            <th>Free Agent TE</th>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Bye Week</th>
+                            {% for item in fa_te %}
+                                <tr>
+                                    <td>{{ item }}</td>
+                                    <td>{{ item.rank }}</td>
+                                    <td>{{ item.team }}</td>
+                                    <td>{{ item.bye }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

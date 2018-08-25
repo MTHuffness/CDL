@@ -1,0 +1,26 @@
+body {
+    background: black url("nfl_2.jpg") no-repeat center fixed;
+    /*background-size: cover;*/
+}
+
+/*homepage styling*/
+.home_header {
+    background-color: white;
+}
+
+.menu_button {
+    background: green;
+    color: white;
+    margin-left: 0;
+    border: 2px solid white;
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*="col-"]{
+    padding-right: 0;
+    padding-left: 0;
+}
